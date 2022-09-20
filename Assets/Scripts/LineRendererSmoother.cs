@@ -49,6 +49,7 @@ public class LineRendererSmoother : MonoBehaviour
         {
             newIndices[i] = meshIndices[i];
             newIndices[meshIndices.Length + i] = meshIndices[j];
+            --j;
         }
         mesh.SetIndices(newIndices, MeshTopology.Triangles, 0);
 
